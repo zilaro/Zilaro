@@ -1,40 +1,216 @@
-zilaro
-Zilaro
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zilaro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Type / to search
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Owner avatar
-Zilaro
-Public
-Set up GitHub Copilot
-Use GitHub's AI pair programmer to autocomplete suggestions as you code.
+  <!-- Comfortaa font -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
 
-Add collaborators to this repository
-Search for people using their GitHub username or email address.
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-Quick setup — if you’ve done this kind of thing before
-or	
-https://github.com/zilaro/Zilaro.git
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comfortaa', cursive;
+      color: #fff;
+      background: #000;
+    }
 
-…or create a new repository on the command line
-echo "# Zilaro" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/zilaro/Zilaro.git
-git push -u origin main
-…or push an existing repository from the command line
-git remote add origin https://github.com/zilaro/Zilaro.git
-git branch -M main
-git push -u origin main
- ProTip! Use the URL for this page when adding GitHub as a remote.
+    /* HEADER */
+    header {
+      background: #111;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    header span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 10px #8A2BE2, 0 0 20px #2a8af7;
+    }
+
+    header i {
+      color: #8A2BE2;
+      font-size: 1.5rem;
+    }
+
+    .decor {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 80vh;
+      background: linear-gradient(135deg, #0b0b2b, #4b0b8a);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #8A2BE2, #2a8af7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: #d1b3ff;
+    }
+
+    /* INFO CARD */
+    .about-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 650px;
+      border: 1px solid rgba(138, 43, 226, 0.25);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+      margin-bottom: 40px;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 25px;
+    }
+
+    .about-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-points li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: #eee;
+    }
+
+    .about-points i {
+      color: #8A2BE2;
+      font-size: 1.1rem;
+      text-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    }
+
+    /* COMING SOON */
+    .coming-soon {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #8A2BE2;
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .coming-soon::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #8A2BE2, #2a8af7);
+      border-radius: 2px;
+      margin-top: 6px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { opacity: 0.6; transform: scaleX(0.9); }
+      100% { opacity: 1; transform: scaleX(1); }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #8A2BE2;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #2a8af7;
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .hero h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <i class="fas fa-shopping-cart"></i>
+    <span>Zilaro</span>
+    <div class="decor">
+      <i class="fas fa-box"></i>
+      <i class="fas fa-truck"></i>
+      <i class="fas fa-credit-card"></i>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>We are Zilaro</h1>
+  <h2>The future of product discovery</h2>
+
+  <div class="about-card">
+    <p class="about-text">
+      Zilaro is a next-generation platform built to showcase innovative,
+      high-quality products through a seamless and immersive online experience.
+    </p>
+
+    <ul class="about-points">
+      <li><i class="fas fa-bolt"></i> Curated, trend-forward products</li>
+      <li><i class="fas fa-layer-group"></i> Clean and immersive browsing</li>
+      <li><i class="fas fa-rocket"></i> Built for what’s next</li>
+    </ul>
+  </div>
+
+  <div class="coming-soon">Coming Soon</div>
+</section>
+
+<footer>
+  Email for more info:
+  <a href="mailto:zilaro.co@gmail.com">zilaro.co@gmail.com</a>
+</footer>
+
+</body>
+</html>
